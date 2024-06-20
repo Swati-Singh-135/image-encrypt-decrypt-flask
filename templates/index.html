@@ -2,19 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Image Encryptor</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Upload Image for Encryption</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <label for="image">Select image:</label>
-        <input type="file" id="image" name="image" accept="image/*" required>
-        <br><br>
-        <label for="number">Enter number for encryption:</label>
-        <input type="number" id="number" name="number" required>
-        <br><br>
-        <input type="submit" value="Encrypt Image">
-    </form>
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Image Encryption/Decryption App</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/upload" method="post" enctype="multipart/form-data" class="border p-4 shadow rounded">
+                    <div class="form-group">
+                        <label for="image">Select image:</label>
+                        <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Enter number for encryption:</label>
+                        <input type="number" class="form-control" id="number" name="number" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Encrypt/Decrypt Image</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
