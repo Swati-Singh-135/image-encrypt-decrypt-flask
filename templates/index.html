@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Encryptor</title>
+</head>
+<body>
+    <h1>Upload Image for Encryption</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="image">Select image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+        <br><br>
+        <label for="number">Enter number for encryption:</label>
+        <input type="number" id="number" name="number" required>
+        <br><br>
+        <input type="submit" value="Encrypt Image">
+    </form>
+</body>
+</html>
